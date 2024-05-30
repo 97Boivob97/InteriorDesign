@@ -9,7 +9,9 @@ var clickPlusPro = document.querySelector("#pro-plus");
 var clickMinusPro = document.querySelector("#pro-minus");
 var proAmount = document.querySelector("#pro-amount");
 var c1 = document.querySelector("#count-pro");
+var proRoomCounter = document.querySelector("#pro-room-count");
 var proButton = document.querySelector("#pro-button");
+var proText = document.querySelector(".pro-text");
 
 var count = 1;
 //basic service
@@ -60,9 +62,13 @@ function minusPro(){
 
 clickMinusPro.addEventListener("click",minusPro);
 
-/*function text2(){
-    var text = "Thank you for choosing"+count+"room";
-}
 
-proButton.addEventListener("click",text2);*/
+function text2(){
+
+    proRoomCounter.innerHTML = count;
+    proText.style.visibility = "visible";
+
+};
+
+proButton.addEventListener("click",text2);
 
