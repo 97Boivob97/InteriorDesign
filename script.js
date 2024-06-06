@@ -14,6 +14,7 @@ var proButton = document.querySelector("#pro-button");
 var proText = document.querySelector(".pro-text");
 
 var count = 1;
+var countpro=1;
 //basic service
 function add(){
     count++;
@@ -43,19 +44,19 @@ basicButton.addEventListener("click",text1);
 //pro service
 
 function addPro(){
-    count++;
-    var final_amount = 249*count;
-    c1.innerHTML = count;
+    countpro++;
+    var final_amount = 249*countpro;
+    c1.innerHTML = countpro;
     proAmount.innerHTML = final_amount;
 }
 
 clickPlusPro.addEventListener("click",addPro);
 
 function minusPro(){
-    if(count>1){
-        count--;
-        c1.innerHTML = count;
-        var final_amount = 249*count;
+    if(countpro>1){
+        countpro--;
+        c1.innerHTML = countpro;
+        var final_amount = 249*countpro;
         proAmount.innerHTML = final_amount;
         }
 }
@@ -65,10 +66,9 @@ clickMinusPro.addEventListener("click",minusPro);
 
 function text2(){
 
-    proRoomCounter.innerHTML = count;
+    proRoomCounter.innerHTML = countpro;
     proText.style.visibility = "visible";
 
 };
 
 proButton.addEventListener("click",text2);
-
